@@ -20,6 +20,9 @@ target/
 *.ipr
 *.properties
 
+# Exceto o exemple.properties que deve manter no GitHub
+!exemple.properties
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
