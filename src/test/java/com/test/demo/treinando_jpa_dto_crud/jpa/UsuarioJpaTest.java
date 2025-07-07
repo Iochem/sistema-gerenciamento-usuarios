@@ -6,6 +6,15 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+/*
+@Getter -Gera automaticamente os métodos get para todos os atributos.
+@Setter - Gera automaticamente os métodos set para todos os atributos.
+@NoArgsConstructor — gera um construtor sem argumentos.
+@AllArgsConstructor — gera um construtor com todos os campos como parâmetros.
+@Table() -Informa qual nome de tabela para esse objeto
+@Id - Anotação do JPA -  indica qual atributo chave primária da tabela
+*/
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -25,6 +34,5 @@ public class UsuarioJpaTeste {
 
     @Column(nullable = false, unique = true)//unique = true - não ter usuário repetido
     private String login;
-
 
 }
