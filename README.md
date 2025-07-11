@@ -1,19 +1,18 @@
 # Sistema de Gerenciamento  de usuários
 
-Este é um projeto em Java desenvolvido com o objetivo de praticar conceitos intermediários e avançados de backend, incluindo a estruturação de uma aplicação com camadas, operações CRUD, uso de banco de dados com JPA, e mapeamento de entidades. Com futuramente uma integração front.
+Projeto Java com foco em praticar conceitos intermediários e avançados de backend, utilizando arquitetura em camadas, operações CRUD com JPA, persistência em banco de dados, testes e treinos de funcionalidades. O sistema está preparado para uma futura integração com frontend.
+
 
 ---
 
 ##  Funcionalidades
 
-- ✅ Cadastro de usuários
-- ✅ Listagem de usuários
-- ✅ Atualização de dados
-- ✅ Exclusão de registros
-- ✅ Conexão com banco de dados PostgreSQL
-- ✅ Persistência com JPA (Hibernate)
-- ✅ Uso de HTTP (com `@RequestMapping`/`@GetMapping`, etc.) se for API
-- ✅ Lombok para reduzir código boilerplate
+- Operações CRUD (Cadastro, listagem, atualização e exclusão de usuários)
+- Integração com banco de dados PostgreSQL
+- Persistência com JPA (Hibernate)
+- Testes e treinos de funcionalidades
+- 🚧 Preparação para integração com endpoints REST
+- Redução de código com Lombok
 
 ---
 
@@ -23,6 +22,5 @@ Este é um projeto em Java desenvolvido com o objetivo de praticar conceitos int
 - Spring Data JPA
 - PostgreSQL
 - Biblioteca Lombok
-- HTTP (API REST)
 - Maven
 - IntelliJ IDEA
