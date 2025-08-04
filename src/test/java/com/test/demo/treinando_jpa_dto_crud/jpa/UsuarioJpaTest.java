@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /*
@@ -17,10 +18,11 @@ import lombok.Setter;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "test_usuario") //Cria a tabela com o nome
-public class UsuarioJpaTeste {
+public class UsuarioJpaTest {
 
     //Chave primária
     @Id
