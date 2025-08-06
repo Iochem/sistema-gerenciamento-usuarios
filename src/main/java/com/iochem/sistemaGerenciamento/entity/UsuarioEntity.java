@@ -19,6 +19,9 @@ public class UsuarioEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(nullable = false)
+    private String nome;
+
     //Campo não pode ser nulo
     @Column(nullable = false, unique = true)//unique = true - não ter usuário repetido
     private String login;
