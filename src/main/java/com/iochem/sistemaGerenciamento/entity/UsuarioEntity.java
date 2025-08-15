@@ -17,7 +17,7 @@ public class UsuarioEntity {
     @Id
     //Indica que o id será gerado automaticamente pelo banco de dados
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(nullable = false)
     private String nome;

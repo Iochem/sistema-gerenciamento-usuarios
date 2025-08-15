@@ -1,4 +1,4 @@
-package com.test.demo.treinando_jpa_dto_crud.crud;
+package com.test.demo.treinando_crud.crud;
 
 import com.iochem.sistemaGerenciamento.Main;
 import com.iochem.sistemaGerenciamento.entity.UsuarioEntity;

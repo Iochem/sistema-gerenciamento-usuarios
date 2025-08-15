@@ -1,5 +1,6 @@
 package com.iochem.sistemaGerenciamento.dto;
 
+import com.iochem.sistemaGerenciamento.entity.UsuarioEntity;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,4 +16,7 @@ public class UsuarioDTO {
     private String nome;
     private String login;
     private String gmail;
+    private String senha;
+
+
 }
