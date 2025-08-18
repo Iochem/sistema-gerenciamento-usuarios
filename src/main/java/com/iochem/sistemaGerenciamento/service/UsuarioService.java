@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class UsuariService {
+public class UsuarioService {
 
     @Autowired
     private UsuarioRepository repository;
@@ -21,10 +21,12 @@ public class UsuariService {
      - Recebe um UsuarioDTO do frontend
      - Converte para UsuarioEntity usando o mapper
      - Salva no banco
+     - Converte de volta em dto para enviar resposta ao frontend
      */
-    public void inserir (UsuarioDTO usuario){
+    public UsuarioDTO inserir(UsuarioDTO usuario){
         UsuarioEntity entity = UsuarioMapper.toEntity(usuario);
-        repository.save(entity);
+        UsuarioEntity inserido = repository.save(entity);
+        return UsuarioMapper.toDTO(inserido);
     }
 
     //Método para excluir
@@ -61,8 +63,8 @@ public class UsuariService {
     - toDTO - Converte de volta para DTO e para enviar ao frontend
     - Retorna DTO para não expor a entidade
      */
-    public UsuarioDTO alterar(UsuarioDTO usuarioDTO) {
-        UsuarioEntity usuarioEntity = UsuarioMapper.toEntity(usuarioDTO);
+    public UsuarioDTO alterar(UsuarioDTO usuario) {
+        UsuarioEntity usuarioEntity = UsuarioMapper.toEntity(usuario);
         UsuarioEntity salvo = repository.save(usuarioEntity);
         return UsuarioMapper.toDTO(salvo);
     }
