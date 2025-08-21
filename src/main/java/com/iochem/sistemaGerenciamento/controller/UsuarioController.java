@@ -1,6 +1,5 @@
 package com.iochem.sistemaGerenciamento.controller;
 
-
 import com.iochem.sistemaGerenciamento.dto.UsuarioDTO;
 import com.iochem.sistemaGerenciamento.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +29,27 @@ public class UsuarioController { //Reponsavel por enviar e receber dados do fron
         return ResponseEntity.status(HttpStatus.CREATED).body(usuarioCriado);
     }
 
-    
+    //Cria o método HTTP para alterar o usuário
+    @PutMapping //Enviar dados para modificar o usuário
+    public UsuarioDTO alterar(@RequestBody UsuarioDTO usuario){
+        return service.alterar(usuario);
+    }
 
+    //Cria o  método HTTP para excluir usuario
+    /*
+    - ReponseEntity<> - Classe do Spring que representa toda a resposta HTTP
+    - ResponseEntity.ok() - método estático da classe ResponseEntity , envia uma mensagem para o frontend
+    - ResponseEntity.status(HttpStatus.NOT_FOUND) - Informa qual será o status da resposta HTTP - Retornando NOT_FOUND
+    - .body(e.getMessage()) - Define a mensagem que vai no corpo da resposta HTTP e pega a mensagem da exceção lançada
+     */
+    @DeleteMapping("/{id}") // Requisição para deletar algo
+    public ResponseEntity<String> excluir( @PathVariable Long id){
+        try{
+            service.excluir(id);
+            return ResponseEntity.ok("Usuário excluído com sucesso");
+
+        }catch (RuntimeException e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        }
+    }
 }
